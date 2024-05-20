@@ -60,6 +60,6 @@ if  __name__=="__main__":
     model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
     token = ""
     tok = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, token=token)
-    data = get_custom_dataset(_, tok, 'test')
+    data = get_plot2code(_, tok, 'test')
     print(data)
     print(data[0])
