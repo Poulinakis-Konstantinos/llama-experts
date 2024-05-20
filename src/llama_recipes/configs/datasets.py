@@ -32,3 +32,10 @@ class custom_dataset:
     file: str = "examples/custom_dataset.py"
     train_split: str = "train"
     test_split: str = "validation"
+
+@dataclass
+class plot2code_dataset:
+    dataset: str = "plot2code_dataset"
+    file: str = "examples/plot2code_dataset.py"
+    train_split: str = "test"
+    test_split: str = "test"
