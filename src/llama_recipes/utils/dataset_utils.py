@@ -10,8 +10,9 @@ import torch
 from llama_recipes.datasets import (
     get_grammar_dataset,
     get_alpaca_dataset,
-    get_samsum_dataset,
+    get_samsum_dataset
 )
+from recipes.finetuning.datasets import get_plot2code_dataset
 
 
 def load_module_from_py_file(py_file: str) -> object:
@@ -54,6 +55,7 @@ DATASET_PREPROC = {
     "grammar_dataset": get_grammar_dataset,
     "samsum_dataset": get_samsum_dataset,
     "custom_dataset": get_custom_dataset,
+    "plot2code_dataset": get_plot2code_dataset,
 }
 
 

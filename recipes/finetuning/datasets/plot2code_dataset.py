@@ -26,7 +26,7 @@ def tokenize_dialog(dialog, tokenizer):
     combined_tokens["labels"] = combined_tokens["labels"][1:] + [-100]
     return dict(combined_tokens, attention_mask=[1]*len(combined_tokens["input_ids"]))
 
-def get_plot2code(dataset_config, tokenizer, split):
+def get_plot2code_dataset(dataset_config, tokenizer, split):
     dataset = datasets.load_dataset("TencentARC/Plot2Code", split='test')
     dataset = dataset.map(lambda sample:
                     {
